@@ -12,7 +12,7 @@ Features provided-
 6. Pause/Cancel through Notification - The user can Pause or Cancel the download going on through the notification itself.
 7. Pause/Resume Functionality - The application provides the functionality of pausing and resuming the download by tapping on the download.
 
-Language used - Kotlin.
+Language used - Kotlin  
 Library used - OKHTTP
 
 There are still some edge cases and bugs left unhandled, it'll be really helpful if you could notify us of those bugs or help in solving them.
