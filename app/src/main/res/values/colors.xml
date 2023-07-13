@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorPrimaryDark">#FF3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorGrey">#999999</color>
+
+    <color name="text_color">#2B2F39</color>
+    <color name="light_grey">#787878</color>
+
+    <color name="green_ellipse_color">#E5FCE4</color>
+    <color name="yellow_ellipse_color">#FFF8E7</color>
+    <color name="red_ellipse_color">#FFE7E7</color>
+    <color name="blue_ellipse_color">#DBF2FF</color>
+    <color name="grey_ellipse_color">#E4E4E4</color>
+
+    <color name="green_color">#72BD6C</color>
+    <color name="yellow_color">#FBC441</color>
+    <color name="red_color">#F26262</color>
+    <color name="grey_color">#A7A7A7</color>
+
+    <color name="progress_bar_grey_color">#E6E6E6</color>
+    <color name="line_color">#D9D9D9</color>
+
+    <color name="angular_gradient_start_color">#313131</color>
+    <color name="angular_gradient_end_color">#C0C0C0</color>
+
+    <color name="wifi_tab_bg_color">#F8F3FF</color>
+    <color name="error_tab_bg_color">#FFEBEB</color>
+
+    <color name="button_white_color">#DBDBDB</color>
+    <color name="button_purple_color">#892EFF</color>
+</resources>

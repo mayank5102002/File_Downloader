@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialogConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:background="@color/line_color"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/addtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new_download"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/jakarta"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line"/>
+
+            <TextView
+                android:id="@+id/fileNametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/file_name_text_view"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addtv"/>
+
+            <TextView
+                android:id="@+id/sizetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="500 MB"
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/jakarta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addtv"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fileNameInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/extensiontv"
+                app:layout_constraintTop_toBottomOf="@id/fileNametv"
+                android:layout_marginTop="20dp"
+                app:endIconDrawable="@drawable/cross_icon"
+                app:endIconTint="@color/black"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fileNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/jakarta"
+                    tools:text="File name"
+                    android:textColor="@color/black"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/extensiontv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="EXE"
+                android:layout_marginTop="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                android:background="@color/progress_bar_grey_color"
+                app:layout_constraintStart_toEndOf="@id/fileNameInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fileNametv"/>
+
+            <TextView
+                android:id="@+id/destinationFoldertv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destination_folder_text_view"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fileNameInputLayout"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/destinationFolderButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:drawablePadding="8dp"
+                android:text="Select Folder"
+                android:textSize="14sp"
+                android:textColor="@color/text_color"
+                android:textAlignment="textStart"
+                android:layout_margin="16dp"
+                android:drawableLeft="@drawable/folder_blank_icon"
+                app:layout_constraintTop_toBottomOf="@+id/destinationFoldertv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:backgroundTint="@color/white"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Button"/>
+
+            <LinearLayout
+                android:id="@+id/wifiLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/wifi_tab_bg_color"
+                android:layout_margin="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/destinationFolderButton">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/download_over_wi_fi_only_resource"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/jakarta"
+                    android:textSize="14sp"
+                    android:padding="20dp"/>
+
+                <CheckBox
+                    android:id="@+id/wifiCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wifiLinearLayout">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/cancel_button"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="36dp" />
+
+                <Button
+                    android:id="@+id/addButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/add_button"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/button_purple_color"
+                    app:strokeWidth="36dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

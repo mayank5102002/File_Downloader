@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialogConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:background="@color/line_color"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/failedLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="36dp">
+
+                <ImageView
+                    android:id="@+id/dialogFailImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/link_error_icon"/>
+
+                <TextView
+                    android:id="@+id/dialogProgressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/something_went_wrong_resource"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/jakarta"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/errorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Error"
+                android:textSize="12sp"
+                android:fontFamily="@font/jakarta"
+                android:textColor="@color/angular_gradient_start_color"
+                android:layout_margin="20dp"
+                android:padding="20dp"
+                android:background="@color/error_tab_bg_color"
+                app:layout_constraintTop_toBottomOf="@id/failedLinearLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/errorTextView">
+
+                <Button
+                    android:id="@+id/closeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/close_button_resource"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="36dp" />
+
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/back_resource"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/button_purple_color"
+                    app:strokeWidth="36dp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

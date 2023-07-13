@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">File Downloader</string>
+
+    <string name="app_bar_title">File Downloader</string>
+    <string name="add_button">Add</string>
+    <string name="no_downloads_string">No Downloads</string>
+
+    <string name="pause_all_button">Pause All</string>
+    <string name="resume_all_button">Resume All</string>
+    <string name="settings_button">Settings</string>
+    <string name="add_new_download">Add New Download</string>
+    <string name="enter_link">Enter Link</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="link_edit_text_hint">Link</string>
+    <string name="grabbing_info_dialog_progress">Grabbing Info...</string>
+    <string name="file_name_text_view">File Name</string>
+    <string name="destination_folder_text_view">Destination Folder</string>
+    <string name="download_over_wi_fi_only_resource">Download over Wi-Fi only</string>
+    <string name="successfully_added_resource">Successfully Added</string>
+    <string name="something_went_wrong_resource">Something went wrong</string>
+    <string name="close_resource">Close</string>
+    <string name="back_resource">Back</string>
+    <string name="done_resource">Done</string>
+    <string name="settings_button_resource">Settings</string>
+    <string name="max_parallel_downloads_textview_resource">Max Parallel Downloads</string>
+    <string name="min_downloads_string_resource">1</string>
+    <string name="max_downloads_string_resource">8</string>
+    <string name="close_button_resource">Close</string>
+    <string name="update_button_resource">Update</string>
+</resources>

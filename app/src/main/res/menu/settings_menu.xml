@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pause_all_button"
+        android:title= "@string/pause_all_button"/>
+    <item
+        android:id="@+id/resume_all_button"
+        android:title="@string/resume_all_button" />
+    <item
+        android:id="@+id/settings_button"
+        android:title="@string/settings_button" />
+</menu>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/dialogProgressLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <ProgressBar
+                android:id="@+id/dialogProgressBar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:progressDrawable="@drawable/angular_gradient"/>
+
+            <TextView
+                android:id="@+id/dialogProgressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grabbing_info_dialog_progress"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialogConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:background="@color/line_color"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/addtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new_download"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/jakarta"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line"/>
+
+            <TextView
+                android:id="@+id/linktv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_link"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addtv"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/linkTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linktv"
+                android:layout_marginTop="20dp"
+                app:endIconDrawable="@drawable/cross_icon"
+                app:endIconTint="@color/black"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/linkEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/jakarta"
+                    tools:text="Link"
+                    android:hint="@string/link_edit_text_hint"
+                    android:textColor="@color/black"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linkTextInputLayout">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/cancel_button"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="36dp" />
+
+                <Button
+                    android:id="@+id/addButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/add_button"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/button_purple_color"
+                    app:strokeWidth="36dp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

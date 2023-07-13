@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialogConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:background="@color/line_color"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/successLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="36dp">
+
+                <ImageView
+                    android:id="@+id/dialogSuccessImageView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/link_success_icon"/>
+
+                <TextView
+                    android:id="@+id/dialogProgressTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/successfully_added_resource"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/jakarta"
+                    android:layout_marginTop="24dp"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/jakarta"
+                android:text="@string/done_resource"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:cornerRadius="24dp"
+                app:strokeColor="@color/button_purple_color"
+                app:strokeWidth="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/successLinearLayout"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

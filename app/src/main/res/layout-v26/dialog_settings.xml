@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialogConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="48dp"
+                android:layout_height="4dp"
+                android:background="@color/line_color"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/settingstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_button_resource"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/jakarta"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line"/>
+
+            <TextView
+                android:id="@+id/mpdtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/max_parallel_downloads_textview_resource"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/jakarta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/settingstv"/>
+
+            <TextView
+                android:id="@+id/minDownloadstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min_downloads_string_resource"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mpdtv"/>
+
+            <TextView
+                android:id="@+id/maxDownloadstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/max_downloads_string_resource"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/jakarta"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mpdtv"/>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="1"
+                android:valueTo="8"
+                android:stepSize="1"
+                android:value="1"
+                app:labelBehavior="withinBounds"
+                app:trackColorActive="@color/green_color"
+                app:trackColorInactive="@color/progress_bar_grey_color"
+                app:thumbColor="@color/white"
+                app:thumbStrokeColor="@color/green_color"
+                app:thumbRadius="12dp"
+                app:thumbElevation="4dp"
+                app:thumbStrokeWidth="3dp"
+                app:layout_constraintTop_toBottomOf="@id/mpdtv"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/slider">
+
+                <Button
+                    android:id="@+id/closeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/close_button_resource"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="36dp" />
+
+                <Button
+                    android:id="@+id/updateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/jakarta"
+                    android:text="@string/update_button_resource"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:cornerRadius="24dp"
+                    app:strokeColor="@color/button_purple_color"
+                    app:strokeWidth="36dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
