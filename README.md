@@ -1,7 +1,8 @@
 # File_Downloader
 File downloader is a downloading microservice for Android that can download links provided to it while providing certain features such as parallel downloading, pausing and resuming the download etc.
 
-Apk Link : https://drive.google.com/file/d/1QHBTWMvugHjyMi9w7CThOoF83T26L7Xg/view?usp=sharing
+Apk Link : https://drive.google.com/file/d/1QHBTWMvugHjyMi9w7CThOoF83T26L7Xg/view?usp=sharing  
+(If app is getting blocked from installation, click on 'More Details' and then click 'Install Anyway')
   
 Features provided-  
 1. Parallel Downloading - You can select the number of parallel downloads you want to download at a single time.
